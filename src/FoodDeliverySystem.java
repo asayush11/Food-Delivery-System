@@ -35,13 +35,10 @@ public class FoodDeliverySystem {
         return restaurant;
     }
 
-    public void displayMenu(String id) {
-        Restaurant restaurant = restaurants.get(id);
-        if (restaurant == null) {
-            System.out.println("Restaurant " + id + " not found");
-            return;
+    public void displayRestaurants() {
+        for (Restaurant restaurant : restaurants.values()) {
+            System.out.println(restaurant.getName() + " " + restaurant.getAddress());
         }
-        restaurant.displayMenu();
     }
 
     public List<Order> getOrdersForRestaurant(Restaurant restaurant) {

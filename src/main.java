@@ -19,13 +19,16 @@ public class main {
         String res3_itm1 = restaurant3.addItems("Pav Bhaji", 80, "Mixed vegetable curry served with bread", true);
         String res3_itm2 = restaurant3.addItems("Roasted Chicken", 50, "Chicken roasted on open flame", false);
 
+        // Displaying restaurants
+        foodDeliverySystem.displayRestaurants();
+
         // Displaying menu
-        foodDeliverySystem.displayMenu(restaurant1.getID());
-        foodDeliverySystem.displayMenu(restaurant2.getID());
-        foodDeliverySystem.displayMenu(restaurant3.getID());
+        restaurant1.displayMenu();
+        restaurant2.displayMenu();
+        restaurant3.displayMenu();
 
         restaurant1.updatePrice(res1_itm2, 220);
-        foodDeliverySystem.displayMenu(restaurant1.getID());
+        restaurant1.displayMenu();
 
         // Adding customers
         Customer customer1 = foodDeliverySystem.addCustomer("John", "abcd@gmail.com", "342325356", "Geeta Nagar");
